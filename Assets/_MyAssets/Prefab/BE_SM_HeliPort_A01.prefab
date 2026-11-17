@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2291194377392400679}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.6087609, z: -0, w: 0.79335374}
-  m_LocalPosition: {x: -3.9457016, y: 0.80795, z: 0.82749176}
+  m_LocalPosition: {x: -2.5961952, y: 0.05795002, z: 3.5184631}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 2203484614636673614}
   - component: {fileID: 3608643056809525521}
   - component: {fileID: 6920719167187665198}
+  - component: {fileID: 321337464451967377}
   m_Layer: 0
   m_Name: BE_SM_HP_Stairs_A01
   m_TagString: Untagged
@@ -124,6 +125,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &321337464451967377
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377189555723918219}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3775146801561167466, guid: a932d058efa15c6489404f75496fc6d2, type: 3}
 --- !u!1 &4272005234348134455
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +248,7 @@ GameObject:
   - component: {fileID: 3514552174576537520}
   - component: {fileID: 6545278979124157011}
   - component: {fileID: 5739543370838599039}
+  - component: {fileID: 6212425809668675184}
   m_Layer: 0
   m_Name: BE_SM_SBlackHawk_Main
   m_TagString: Untagged
@@ -304,6 +328,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6212425809668675184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5261608826190808795}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.4445453, y: 20.250238, z: 3.4135914}
+  m_Center: {x: 0, y: -2.145026, z: 1.9509653}
 --- !u!1 &6662707276050812065
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +450,7 @@ GameObject:
   - component: {fileID: 6635737613145519563}
   - component: {fileID: 192003720237091841}
   - component: {fileID: 5425435599266825482}
+  - component: {fileID: 7171567810067137224}
   m_Layer: 0
   m_Name: BE_SM_SBlackHawk_RotorBot
   m_TagString: Untagged
@@ -484,6 +530,19 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7171567810067137224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908017616550716328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f24aea4b85c6b4483d8ecf33ed0e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConstRotation
+  rotationsPerMinute: 10
 --- !u!1 &7514445635501228072
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +554,7 @@ GameObject:
   - component: {fileID: 1127659240279986314}
   - component: {fileID: 6632713982773080197}
   - component: {fileID: 300817033243864673}
+  - component: {fileID: 6171255559493349530}
   m_Layer: 0
   m_Name: BE_SM_HP_Sup_A01
   m_TagString: Untagged
@@ -574,6 +634,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6171255559493349530
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7514445635501228072}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 35.400005, y: 35.4, z: 4.4883437}
+  m_Center: {x: 17.200003, y: 17.200006, z: -0.6500597}
 --- !u!1 &7777582937097991874
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +756,7 @@ GameObject:
   - component: {fileID: 2390090210463726086}
   - component: {fileID: 1542940329705387664}
   - component: {fileID: 2958170460547409034}
+  - component: {fileID: 4975604951637307984}
   m_Layer: 0
   m_Name: BE_SM_SBlackHawk_RotorTop
   m_TagString: Untagged
@@ -754,6 +836,19 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4975604951637307984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8144074483501009460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f24aea4b85c6b4483d8ecf33ed0e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConstRotation
+  rotationsPerMinute: -10
 --- !u!1 &9004826534720590701
 GameObject:
   m_ObjectHideFlags: 0
