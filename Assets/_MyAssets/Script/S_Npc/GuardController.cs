@@ -85,13 +85,12 @@ public class GuardController : MonoBehaviour
         stateMachine.Tick();
         if (CanSeeTarget() == true)
         {
-            print("oui");
             stateMachine.ChangeState(alertState);
         }
         else if (CanSeeTarget() == false)
         {
             stateMachine.ChangeState(patrolState);
-            print("non");
+
         }
     }
 

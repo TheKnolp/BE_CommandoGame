@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerView : MonoBehaviour
 {
     GameObject _en;
-    IChangeVis _iCV;
+    
 
     [SerializeField] float fovDegrees;
     [SerializeField] float maxDistance;
@@ -24,20 +24,6 @@ public class PlayerView : MonoBehaviour
     void Update()
     {
         Detected();
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other!=null && other.CompareTag("Enemies"))
-        {
-            print(other);
-            _en =other.gameObject;
-            _iCV = other.GetComponent<IChangeVis>();
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        _iCV.IsVisibleToCam(false);
-        _en=null;
     }
     private bool IsDetected(Transform _guard, Transform _target, float _fovDegrees, float _maxDistance)
     {
@@ -81,12 +67,12 @@ public class PlayerView : MonoBehaviour
     {
         if (IsDetected(this.transform, _en.transform, fovDegrees, maxDistance) == true)
         {
-            _iCV.IsVisibleToCam(true);
+            
             return true;
         }
         else if (IsDetected(this.transform, _en.transform, fovDegrees, maxDistance) == false)
         {
-            _iCV.IsVisibleToCam(false);
+            
             return false;
         }
         else

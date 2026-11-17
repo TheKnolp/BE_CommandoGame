@@ -251,11 +251,8 @@ GameObject:
   - component: {fileID: 872140664144108262}
   - component: {fileID: 6671136321248034440}
   - component: {fileID: 5462509733234517148}
-  - component: {fileID: 6807919766903514636}
-  - component: {fileID: 7312357460641377313}
-  - component: {fileID: 1026106428175263286}
   - component: {fileID: 3516641907385363693}
-  - component: {fileID: 8260055545987730702}
+  - component: {fileID: 5795911611270361185}
   m_Layer: 8
   m_Name: NPC_Guard
   m_TagString: Enemies
@@ -360,54 +357,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6807919766903514636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291873418077372692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2c4fc812902a1468049717369d88ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Detection
-  target: {fileID: 0}
-  fovDegrees: 90
-  maxDistance: 10
-  _pointToCheck: []
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &7312357460641377313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291873418077372692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cd2987689d6b0841b926ecbccdd991f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChangeLightColor
---- !u!114 &1026106428175263286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291873418077372692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f86d8309960dca140adfbac987f72a60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::npcPatrol
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!195 &3516641907385363693
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -430,7 +379,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8260055545987730702
+--- !u!114 &5795911611270361185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -439,6 +388,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 5291873418077372692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3ff094984bf9f429dca988b29bb252, type: 3}
+  m_Script: {fileID: 11500000, guid: 306c808f9b938df4280f0d959b93d2a3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPC
+  m_EditorClassIdentifier: Assembly-CSharp::GuardController
+  viewDistance: 12
+  viewAngle: 90
+  lineOfSightMask:
+    serializedVersion: 2
+    m_Bits: 192
+  eyesOrigin: {fileID: 8254367520830543275}
+  target: {fileID: 0}
+  patrolWaypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  waypointTolerance: 1
+  waypointWaitTime: 4
+  attackRange: 5
+  fireRate: 1
+  memoryDuration: 3
+  onShoot:
+    m_PersistentCalls:
+      m_Calls: []
