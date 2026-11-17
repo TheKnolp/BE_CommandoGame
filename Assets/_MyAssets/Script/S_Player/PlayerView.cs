@@ -25,6 +25,10 @@ public class PlayerView : MonoBehaviour
     {
         Detected();
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        _en = other.gameObject;
+    }
     private bool IsDetected(Transform _guard, Transform _target, float _fovDegrees, float _maxDistance)
     {
         //Check 1;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GuardAlertState : GuardBaseState
 {
@@ -8,16 +9,16 @@ public class GuardAlertState : GuardBaseState
 
     public override void Enter()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("I need to check position");
     }
 
     public override void Exit()
     {
-        throw new System.NotImplementedException();
+        SceneManager.LoadScene("Main");
     }
 
     public override void Tick()
     {
-        Guard.FaceTarget();
+        Guard.GoToLastPlPosition();
     }
 }

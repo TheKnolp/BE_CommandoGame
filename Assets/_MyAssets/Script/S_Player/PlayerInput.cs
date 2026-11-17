@@ -26,7 +26,7 @@ public class PlayerInput : MonoBehaviour
         if(_direction != Vector3.zero )
         {
             Vector3 boundedInput = Vector3.ClampMagnitude(_direction, 1f);
-            _rb.linearVelocity = boundedInput * (_speed * Time.fixedDeltaTime);
+            _rb.linearVelocity = boundedInput * (_speed*100 * Time.fixedDeltaTime);
         }
         else
         {

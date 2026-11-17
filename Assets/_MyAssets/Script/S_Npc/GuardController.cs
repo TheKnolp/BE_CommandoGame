@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 [RequireComponent(typeof(NavMeshAgent))]
 public class GuardController : MonoBehaviour
 {
@@ -57,6 +58,8 @@ public class GuardController : MonoBehaviour
     private GuardAlertState alertState;
     private GuardShootingState shootingState;
 
+    public bool alarmOn = false;
+
 
     // Propriété de lecture publique pour l'outillage de débug (GuardDebugger)
     public string CurrentStateName => stateMachine != null && stateMachine.CurrentState != null 
@@ -76,20 +79,31 @@ public class GuardController : MonoBehaviour
 
     private void Start()
     {
-        stateMachine.ChangeState(patrolState); 
-        
+        stateMachine.ChangeState(patrolState);    
     }
 
     private void Update()
     {
         stateMachine.Tick();
-        if (CanSeeTarget() == true)
+        if (CanSeeTarget() == true|| alarmOn==true)
         {
+            lastKnownPosition = target.position;
             stateMachine.ChangeState(alertState);
         }
         else if (CanSeeTarget() == false)
         {
             stateMachine.ChangeState(patrolState);
+        }
+
+        if(CanSeeTarget() == true && (stateMachine.CurrentState==alertState))
+        {
+            if(IsTargetInAttackRange()==true)
+            {
+                SceneManager.LoadScene("Death");
+            }
+        }
+        else if (CanSeeTarget() == false && (stateMachine.CurrentState==alertState))
+        {
 
         }
     }
@@ -221,6 +235,10 @@ public class GuardController : MonoBehaviour
             agent.isStopped = true;
             agent.ResetPath();
         }
+    }
+    public void GoToLastPlPosition()
+    {
+        agent.SetDestination(lastKnownPosition);
     }
 
     #endregion

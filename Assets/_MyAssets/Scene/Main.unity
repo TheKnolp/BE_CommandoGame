@@ -3246,17 +3246,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2188992627289464615, guid: daf5bf1027a68f14ab06bfa70b189ace, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045018156836098973, guid: daf5bf1027a68f14ab06bfa70b189ace, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7494387889242862430, guid: daf5bf1027a68f14ab06bfa70b189ace, type: 3}
       propertyPath: _speed
-      value: 200
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
