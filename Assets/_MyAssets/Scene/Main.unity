@@ -1210,15 +1210,15 @@ MonoBehaviour:
     updateOnlyOnMove: 0
     lastSeenAt: {x: 0, y: 0}
   - revealerTransform: {fileID: 7029025665090001091}
-    sightRange: 50
+    sightRange: 5000
     updateOnlyOnMove: 0
     lastSeenAt: {x: 0, y: 0}
   - revealerTransform: {fileID: 344829197}
-    sightRange: 50
+    sightRange: 5000
     updateOnlyOnMove: 0
     lastSeenAt: {x: 0, y: 0}
   - revealerTransform: {fileID: 5305895446233634107}
-    sightRange: 50
+    sightRange: 5000
     updateOnlyOnMove: 0
     lastSeenAt: {x: 0, y: 0}
   levelMidPoint: {fileID: 41300508}

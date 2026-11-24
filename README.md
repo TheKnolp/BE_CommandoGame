@@ -10,11 +10,7 @@ TO DO :
 
 &#x09;- FeedBack
 
-&#x09;- Minimaps 
-
 &#x09;- LD
-
-&#x09;- EndScreen
 
 &#x09;- Context
 

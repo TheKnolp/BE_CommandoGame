@@ -795,7 +795,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1709621133}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: GoToMain
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
