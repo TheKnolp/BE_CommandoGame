@@ -16,6 +16,7 @@ public class Sub : MonoBehaviour, IInteractable
 
     public void Interact(GameObject interactor)
     {
+        print("HasCompletObjective");
         interactor.GetComponent<Interaction>().hasCompletOBJ = true;
     }
 }
