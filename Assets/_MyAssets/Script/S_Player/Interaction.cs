@@ -3,6 +3,8 @@ using UnityEngine;
 public class Interaction : MonoBehaviour
 {
     IInteractable interactable;
+    public bool hasExplosive = false;
+    public bool hasCompletOBJ=false;
     private void OnTriggerEnter(Collider other)
     {
         print(other.gameObject+"col");
@@ -10,6 +12,11 @@ public class Interaction : MonoBehaviour
         if(other.gameObject.GetComponent<IInteractable>() != null)
         {
             interactable = other.gameObject.GetComponent<IInteractable>();
+        }
+        if(other.gameObject.GetComponent<Explo>()!= null)
+        {
+            Destroy(other);
+            hasExplosive = true;
         }
     }
     private void Update()

@@ -3,11 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class Heli : MonoBehaviour, IInteractable
 {
-    public bool hasCompletOBJ;
+   
     public bool CanInteract(GameObject interactor)
     {
-        print("Objective Completion Statue :" + hasCompletOBJ);
-        return hasCompletOBJ;
+        return interactor.GetComponent<Interaction>().hasCompletOBJ; 
     }
 
     public void Interact(GameObject interactor)
